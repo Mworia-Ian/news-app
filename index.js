@@ -55,7 +55,7 @@ async function fetchNewsQuery (query){
 function displayBlogs(articles) {
     blogContainer.innerHTML = '';
 
-    articles.forEach((article) => {
+    articles.filter((article) => Boolean(article.author)).forEach((article) => {
         const blogCard = document.createElement('div')
         blogCard.classList.add('card', 'm-3')
         blogCard.style.width = '18rem'
@@ -78,6 +78,7 @@ function displayBlogs(articles) {
 
         const readMoreLink = document.createElement('a')
         readMoreLink.href = article.url
+        readMoreLink.target = "_blank"
         readMoreLink.classList.add('btn', 'btn-success')
         readMoreLink.textContent = 'Read More'
 
@@ -101,6 +102,7 @@ function displayBlogs(articles) {
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const articles = await fetchRandomNews();
+        console.log(articles);
         displayBlogs(articles);
     } catch (error) {
         console.error('Error fetching random news', error);
