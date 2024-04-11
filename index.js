@@ -78,7 +78,7 @@ function displayBlogs(articles) {
 
         const readMoreLink = document.createElement('a')
         readMoreLink.href = article.url
-        readMoreLink.target = "_blank"
+        readMoreLink.target = '_blank'
         readMoreLink.classList.add('btn', 'btn-success')
         readMoreLink.textContent = 'Read More'
 
@@ -86,10 +86,8 @@ function displayBlogs(articles) {
         cardBody.appendChild(description)
         cardBody.appendChild(readMoreLink)
         cardBody.addEventListener('click', () => {
-            window.open(article.url, '_blank')
+            window.open(article.url,  '_blank')
         })
-
-
 
         blogCard.appendChild(img)
         blogCard.appendChild(cardBody)
