@@ -5,7 +5,11 @@
 #### By *Ian M. Mworia*
 
 ## Description
-This is a web application that fetches news using the News API. You can search for your desired topic using the search field provided. 
+This is a web application that fetches news using the News API.
+
+
+## Web App Link
+https://mworias-news-app.netlify.app/
 
 ## Resources 
 https://newsapi.org/ </br>
