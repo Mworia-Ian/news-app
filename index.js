@@ -1,4 +1,4 @@
-const apiKey = '61df54b40a4e408d906a0d84e8237bed'
+const apiKey = 'a18c7bda370f4900ae1a7c0a8435a841'
 
 const blogContainer = document.getElementById('blog-container')
 
@@ -21,7 +21,8 @@ async function fetchRandomNews(){
     }
 }
 
-searchButton.addEventListener('click', async () =>{
+searchButton.addEventListener('click', async (event) =>{
+    event.preventDefault()
     const query = searchField.value.trim()
 
     if (query !== ''){
